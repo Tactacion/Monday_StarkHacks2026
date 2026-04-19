@@ -1,0 +1,39 @@
+# Sinew runtime dependencies.
+#
+# Core (required for the hardware bridge, orchestrator, and brain):
+#   flask, pyserial, opencv-python, numpy, anthropic, pyyaml, python-dotenv, requests
+#
+# Voice (optional, falls back to ManualTrigger if missing):
+#   faster-whisper, sounddevice
+#
+# TTS (optional, orchestrator prints acknowledgements to stdout if missing):
+#   pyttsx3
+#
+# Calibration GUI (optional, not needed for the demo itself, lives in its own
+# file because PyQt5 has no aarch64 wheel on PyPI and will try to build from
+# source there):
+#   pip install -r requirements-calibration.txt
+#
+# Install demo + voice + TTS:  pip install -r requirements.txt
+# Install test-only deps:      pip install -r requirements-dev.txt
+# Install calibration GUI:     pip install -r requirements-calibration.txt
+#
+# Lower bounds are loose. Tested against Python 3.12. If you need to upgrade
+# past a pinned lower bound, do it and rerun the full test suite.
+
+# ---- Core ----
+flask>=3.0
+pyserial>=3.5
+opencv-python>=4.8
+numpy>=1.24
+anthropic>=0.40
+pyyaml>=6.0
+python-dotenv>=1.0
+requests>=2.31
+
+# ---- Voice (optional at runtime) ----
+faster-whisper>=1.0
+sounddevice>=0.4
+
+# ---- TTS (optional) ----
+pyttsx3>=2.90

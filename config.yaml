@@ -1,0 +1,49 @@
+# Sinew configuration.
+# Edit these before running the demo. No code changes needed. Environment
+# variables still override individual components where supported (see README).
+
+camera_index: 0
+camera_width: 1280
+camera_height: 720
+
+receiver_url: http://127.0.0.1:5001
+
+voice:
+  wake_phrase: hey sinew
+  whisper_model: base
+  whisper_device: cpu
+  vad_threshold: 500
+  # Audio input. null = system default. Set to an integer index or a
+  # substring of the device name to pin VoiceListener to a specific mic.
+  # Use `python -m app.voice --list-devices` to see what's available.
+  input_device: null
+
+orchestrator:
+  abort_window_ms: 500
+  confidence_scale:
+    high: 1.0
+    medium: 0.75
+    low: 0.5
+
+overlay:
+  state_badge_size: 24
+  transcript_font_size: 16
+  confidence_border_width: 8
+  refusal_flash_duration_s: 3.0
+
+# Mode settings. Piano/sign timing is firmware-level; these are for reference.
+modes:
+  default: grasp
+  piano:
+    songs: [MARY, HOTCROSS, SCALE, TRILL, ARPEGGIO]
+    note_on_ms: 200    # hardcoded in firmware
+    note_gap_ms: 50     # hardcoded in firmware
+  sign:
+    hold_ms: 500        # per letter hold duration (sent to firmware)
+    gap_ms: 200         # between letters (hardcoded in firmware)
+
+# Session bookkeeping, not used by main.py but kept for future session_logger.
+session:
+  reps_per_set: 10
+  sets_per_session: 3
+  rest_between_sets_sec: 120

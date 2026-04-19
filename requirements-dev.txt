@@ -1,0 +1,9 @@
+# Development and test-only dependencies.
+#
+# Install on top of the runtime set:
+#   pip install -r requirements.txt -r requirements-dev.txt
+
+-r requirements.txt
+
+pytest>=8.0
+Pillow>=10.0   # used by tests/fixtures/validate_fixtures.py

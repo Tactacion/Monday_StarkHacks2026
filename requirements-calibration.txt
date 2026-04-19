@@ -1,0 +1,14 @@
+# Calibration GUI only. Install on top of requirements.txt when you need
+# to run `python calibration/stimGUI.py`. Not needed to run the demo itself.
+#
+# Note on ARM (aarch64 Linux, Raspberry Pi 64-bit, Apple Silicon via a
+# Linux VM): PyQt5 has no prebuilt wheel on PyPI for aarch64, so pip will
+# try to build from source. You need Qt dev packages installed first:
+#
+#   sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+#
+# On x86_64 Linux, macOS, and Windows the install is wheel-only and fast.
+
+-r requirements.txt
+
+PyQt5>=5.15

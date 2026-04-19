@@ -1,0 +1,19 @@
+name: sinew-laptop
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - anthropic
+      - opencv-python
+      - flask
+      - pyserial
+      - speechrecognition
+      - pyaudio
+      - requests
+      - python-dotenv
+      - PyQt5
+      - pyttsx3
+      - pyyaml

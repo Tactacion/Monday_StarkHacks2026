@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+
+# Virtualenvs
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs (rotating, can be large)
+hardware/logs/
+app/logs/
+*.log
+
+# Environment files
+.env
+.env.local
+*.env
+!.env_empty
+
+# OS
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+
+# Whisper / HuggingFace model caches
+.cache/
+
+# Test artifacts
+/tmp/sinew_test_frame_*.jpg
+tests/fixtures/_placeholder_backup/
+CLAUDE.md

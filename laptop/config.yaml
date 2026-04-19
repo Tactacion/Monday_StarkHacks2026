@@ -1,0 +1,7 @@
+pi_receiver_port: 5001
+pi_frame_server_port: 5002
+multiplex_interval_ms: 60
+relay_on_pulse_ms: 50
+wake_phrase: "hey operator"
+intent_capture_seconds: 4
+state_machine_timeout_seconds: 15
